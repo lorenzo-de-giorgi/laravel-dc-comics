@@ -6,17 +6,203 @@ $fa-font-path: "../webfonts" !default;
 @import "~@fortawesome/fontawesome-free/scss/regular.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
-
 @import "~bootstrap/scss/bootstrap.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 header{
-    background-color: red;
+    display: flex;
+    justify-content: space-between;
 }
 
-.ldg-main{
-    background-color: blue;
+img{
+    padding: 20px;
+    width: 120px;
 }
 
-footer{
-    background-color: green;
+nav{
+    align-content: center;
+
+    ul{
+        list-style: none;
+        display: flex;
+
+        li{
+            margin: 0 10px;
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 500;
+                color: $headertext;
+                padding-bottom: 42px;
+                
+                &:hover{
+                    transition: 0.1s;
+                    border-bottom: 5px solid $bluetext;
+                    color: $bluetext;
+                }
+            }
+        }
+    }
+}
+
+.jumbo{
+    background-image: url('../img/jumbotron.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+
+.top-part{
+background-color: $mainbg;
+color: $white;
+font-weight: 600;
+padding: 40px;
+font-size: 30px;
+}
+
+.t-y{
+transform: translateY(-140%);
+}
+
+.current-series{
+background-color: $bluetext;
+padding: 10px 30px;
+text-transform: uppercase;
+font-size: 20px;
+font-weight: 700;
+}
+
+.more{
+text-transform: uppercase;
+font-size: 16px;
+padding: 8px 45px;
+background-color: $bluetext;
+color: $white;
+border: none;
+font-weight: 600;
+}
+
+main{
+position: relative;
+}
+
+.bottom-part{
+    background-color: $bluetext;
+    color: $white;
+
+    .container{
+        div{
+            margin-right: 50px;
+        }
+    }
+
+    img{
+        width: 70px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    span{
+        text-transform: uppercase;
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    .img-locator{
+        img{
+            width: 70px;
+        }
+    }
+}
+
+.square{
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+    }
+}
+
+p{
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.footer-top{
+    background-image: url('../img/footer-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul{
+    padding-top: 20px;
+
+    span{
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 17px;
+    }
+
+    li{
+        padding-top: 3px;
+        font-size: 14px;
+        a{
+            text-decoration: none;
+            color: $grayfootertext;
+        }
+    }
+}
+
+.logo{
+    margin-top: -95px;
+
+    img{
+        width: 105%;
+    }
+}
+
+.footer-bottom{
+    position: relative;
+    background-color: $headertext;
+    margin-top: -80px;
+
+    .follow-us{
+        color: $bluetext;
+        text-transform: uppercase;
+        margin-right: 40px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .container{
+        padding: 30px;
+
+        .button-signup{
+        border: 3px solid $bluetext;
+        padding: 8px 15px;
+        text-transform: uppercase;
+        background-color: $headertext;
+        color: $white;
+        }
+        
+        .social{
+
+            ul{
+                list-style: none;
+                
+                li{
+                    margin-left: -20px;
+
+                    img{
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -1,11 +1,4 @@
-@extends('layouts.app')
-
-@section('title', 'Home')
-
+@extends('layouts.app');
 @section('content')
-    <div class="ldg-main">
-        <section class="container text-center">
-            Body
-        </section>
-    </div>
+    <h1 class="text-center">Homepage</h1>
 @endsection
