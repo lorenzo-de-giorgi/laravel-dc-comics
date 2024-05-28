@@ -21,6 +21,11 @@
                 Vendita: {!!$comic->sale_date!!}
             </div>
             <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-dark">Modifica</a>
+            <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="Elimina" class="btn btn-danger">
+            </form>
         </div>
     </div>
 </section>
