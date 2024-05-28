@@ -16,6 +16,7 @@
                                 </div>
                                 <p>{{ $comic->series }}</p>
                                 <p>Costo: {{ $comic->price }}</p>
+                                <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">Scopri</a>
                             </div>
                         </div>
                     @endforeach
