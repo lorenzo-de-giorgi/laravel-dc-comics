@@ -17,6 +17,7 @@
                                 <p>{{ $comic->series }}</p>
                                 <p>Costo: {{ $comic->price }}</p>
                                 <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">Scopri</a>
+                                <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-dark">Modifica</a>
                             </div>
                         </div>
                     @endforeach
