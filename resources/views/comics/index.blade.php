@@ -9,15 +9,16 @@
                 </div>
                 <div class="row">
                     @foreach ($comics as $comic)
-                        <div class="col-12 col-md-6 col-lg-3 col-xl-2 mb-4">
-                            <div>
-                                <div class="square">
-                                    <img src="{{ $comic->thumb }}">
+                        <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4 d-flex">
+                            <div class="card bg-dark text-white" style="width: 18rem;">
+                                <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->id }}">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{ $comic->title }}</h5>
+                                  <p class="card-text">Costo: {{ $comic->price }}</p>
+                                  <p class="card-text">Serie: {{ $comic->series }}</p>
+                                  <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">Scopri</a>
+                                  <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-dark">Modifica</a>
                                 </div>
-                                <p>{{ $comic->series }}</p>
-                                <p>Costo: {{ $comic->price }}</p>
-                                <a href="{{route('comics.show', $comic->id)}}" class="btn btn-primary">Scopri</a>
-                                <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-dark">Modifica</a>
                             </div>
                         </div>
                     @endforeach
