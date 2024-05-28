@@ -20,6 +20,7 @@
             <div>
                 Vendita: {!!$comic->sale_date!!}
             </div>
+            <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-dark">Modifica</a>
         </div>
     </div>
 </section>

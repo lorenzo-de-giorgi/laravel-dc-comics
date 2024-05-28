@@ -57,9 +57,9 @@ class ComicController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Comic $comic)
     {
-        return view('comics.edit');
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -67,7 +67,16 @@ class ComicController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $comic = Comic::find($id);
+        $form_data = $request->all();
+        $comic->title = $form_data['title'];
+        $comic->description = $form_data['description'];
+        $comic->thumb = $form_data['thumb'];
+        $comic->price = $form_data['price'];
+        $comic->series = $form_data['series'];
+        $comic->type = $form_data['type'];
+        $comic->update();
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
