@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Models\Comic;
 
+use App\Http\Requests\ComicPostRequest;
+
+
 class ComicController extends Controller
 {
     /**
@@ -31,9 +34,9 @@ class ComicController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store( ComicPostRequest $request)
     {
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $new_comic = new Comic();
         $new_comic->title = $form_data['title'];
         $new_comic->description = $form_data['description'];
