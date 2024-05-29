@@ -8,6 +8,8 @@ use App\Models\Comic;
 
 use App\Http\Requests\ComicPostRequest;
 
+use App\Http\Requests\UpdateComicPostRequest;
+
 
 class ComicController extends Controller
 {
@@ -67,10 +69,10 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateComicPostRequest $request, string $id)
     {
         $comic = Comic::find($id);
-        $form_data = $request->all();
+        $form_data = $request->validated();
         $comic->title = $form_data['title'];
         $comic->description = $form_data['description'];
         $comic->thumb = $form_data['thumb'];
